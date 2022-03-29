@@ -1,0 +1,52 @@
+
+
+<!-- <p>signin works!</p> -->
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!------ Include the above in your HEAD tag ---------->
+
+<body>
+    <div id="login">
+        <!-- <h3 class="text-center text-white pt-5">Login form</h3> -->
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" action="" method="post"(ngSubmit)="onSubmit()" #f="ngForm"   >
+                            <h3 class="text-center text-info">Add Blog</h3>
+
+                            <div class="form-group">
+                                <label for="title" class="text-info">Id</label><br>
+                                <input type="text" name="id" id="name" class="form-control" #fid="ngModel" ngModel required>
+                                <span *ngIf="fid.invalid && fid.touched">This is required field.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="title" class="text-info">Title</label><br>
+                                <input type="text" name="title" id="name" class="form-control"  value="title" #ftitle="ngModel" ngModel required>
+                                <span *ngIf="ftitle.invalid && ftitle.touched">This is required field.</span>
+                            </div>
+                           
+                            <div class="form-group">
+                                <label for="desciption" class="text-info">Description</label><br>
+                             <textarea name="desciption" value="desciption" #fdesc="ngModel"ngModel required></textarea>
+                             <span *ngIf="fdesc.invalid && fdesc.touched">This is required field.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="author" class="text-info">Author</label><br>
+                                <input type="text" name="Author" id="author" class="form-control" value="Author" #fAuthor="ngModel" ngModel  required>
+                                <span *ngIf="fAuthor.invalid && fAuthor.touched">This is required field.</span>
+                            </div>
+
+                            <button class="text-center btn btn-primary" [disabled]="f.invalid">Submit</button>
+                           
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+

@@ -1,0 +1,7 @@
+textarea {
+    width: 400px;
+    height: 150px;
+  }
+.ng-touched.ng-invalid{
+ color: red;
+}

@@ -1,0 +1,34 @@
+
+
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<div class="jumbotron" >
+  <h1 class="text-center">Hello, Foodie!</h1>
+  <p class=" textHandle text-left">This website will give idea about different types of food.</p>
+  <hr class="my-4">
+  <p class=" textHandle text-left">You can add your own blog in this website by clicking on Add Button.</p>
+  
+  <!-- <button class="btn btn-primary btn-center btn-lg ml-4" (click)="getAllPost()"  >Read Blogs</button> -->
+  <button class="btn btn-danger btn-center btn-lg ml-4" routerLink="/add" >Add Blog</button>
+  <button class="btn btn-info btn-center btn-lg ml-4" routerLink="/contact">Contact us</button>
+</div>
+
+
+<div class="card-columns">
+  <div *ngFor="let temp of posts" class="card border-success mb-3" style="max-width: 18rem;">
+      <div class="card-header bg-transparent border-success">{{temp['title']}}</div>
+      <div class="card-body text-success">
+        <p class="card-text">{{temp['desciption']}}</p>
+         <a class="btn btn-secondary text-right ml-4"  routerLink="/update/{{temp['id']}}" >Update</a>
+         <a class="btn btn-danger text-right ml-4"   (click)="deletePost(temp['id'])" routerLink="/home"  >Delete </a>
+      </div>
+      <div class="card-footer bg-transparent border-success">Author:  {{temp['Author']}}</div>
+    </div>
+    </div>  
+  
+  
+  
