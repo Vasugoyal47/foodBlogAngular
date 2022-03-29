@@ -1,10 +1,19 @@
 /* @import  '~bootstrap/dist/css/bootstrap.min.css' */
 .textHandle{
-    color: red;
+    color: gray;
     font-family: 'Times New Roman', Times, serif;
 }
 .check{
     display: flex;
     flex-direction: row;
     margin:10px;
+}
+.card{
+   margin-left:10px; 
+}
+.card-columns{
+
+        background-image: url("../pic1.jpg");
+        color:black;
+      
 }

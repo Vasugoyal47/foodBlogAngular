@@ -15,6 +15,7 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 import{HttpClientModule} from '@angular/common/http'
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
 // import { DefaultComponent } from './default/default.component';
 // import{HttpModule} from'angular/http';
 
@@ -38,6 +39,7 @@ const routes=[
     AddNewBlogComponent,
     BlogCardComponent,
     UpdateBlogComponent,
+    FooterComponent,
    
   
   ],

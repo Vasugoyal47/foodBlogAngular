@@ -18,7 +18,7 @@
                             <h3 class="text-center text-info">Add Blog</h3>
 
                             <div class="form-group">
-                                <label for="title" class="text-info">Id</label><br>
+                                <label for="title" class=" special text-info">Id</label><br>
                                 <input type="text" name="id" id="name" class="form-control" #fid="ngModel" ngModel required>
                                 <span *ngIf="fid.invalid && fid.touched">This is required field.</span>
                             </div>
@@ -40,7 +40,7 @@
                                 <span *ngIf="fAuthor.invalid && fAuthor.touched">This is required field.</span>
                             </div>
 
-                            <button class="text-center btn btn-primary" [disabled]="f.invalid">Submit</button>
+                            <button class="text-center btn btn-primary" [disabled]="f.invalid" style="margin-bottom: 5px;">Submit</button>
                            
                         </form>
                     </div>

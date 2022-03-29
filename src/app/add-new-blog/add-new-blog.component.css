@@ -5,3 +5,11 @@ textarea {
 .ng-touched.ng-invalid{
  color: red;
 }
+body{
+  background-image: url("../pic1.jpg");
+  color:black;
+}
+.text-info{
+  color:black !important;
+}
+
